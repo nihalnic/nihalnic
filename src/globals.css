@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply bg-dark-2 text-white min-h-screen font-inter;
+  }
+}
+
+@layer utilities {
+  /* TYPOGRAPHY */
+  .h1-regular {
+    @apply text-[36px] font-normal leading-[110%] tracking-tighter;
+  }
+
+  .h1-semibold {
+    @apply text-[36px] font-semibold leading-[110%] tracking-tighter;
+  }
+
+  .h1-bold {
+    @apply text-[45px] font-bold leading-[110%] tracking-tighter;
+  }
+
+  .h2-regular {
+    @apply text-[28px] font-normal leading-[140%] tracking-tighter;
+  }
+
+  .h2-semibold {
+    @apply text-[28px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .h2-bold {
+    @apply text-[28px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .h3-regular {
+    @apply text-[22px] font-normal leading-[140%] tracking-tighter;
+  }
+
+  .h3-medium {
+    @apply text-[22px] font-medium leading-[140%] tracking-tighter;
+  }
+
+  .h3-semibold {
+    @apply text-[22px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .h3-bold {
+    @apply text-[22px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .body-regular {
+    @apply text-[18px] font-normal leading-[140%];
+  }
+
+  .body-medium {
+    @apply text-[18px] font-medium leading-[140%];
+  }
+
+  .body-semibold {
+    @apply text-[18px] font-semibold leading-[140%];
+  }
+
+  .base-regular {
+    @apply text-[16px] font-normal leading-[140%];
+  }
+
+  .base-medium {
+    @apply text-[16px] font-medium leading-[140%];
+  }
+
+  .base-semibold {
+    @apply text-[16px] font-semibold leading-[140%];
+  }
+
+  .base-bold {
+    @apply text-[16px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .small-regular {
+    @apply text-[14px] font-normal leading-[140%];
+  }
+
+  .small-medium {
+    @apply text-[14px] font-medium leading-[140%];
+  }
+
+  .small-semibold {
+    @apply text-[14px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .tiny-light {
+    @apply text-[12px] font-light leading-[140%];
+  }
+
+  .tiny-regular {
+    @apply text-[12px] font-normal leading-[140%];
+  }
+
+  .tiny-medium {
+    @apply text-[12px] font-medium leading-[140%];
+  }
+
+  /* -------- UTILITIES ----------- */
+
+  .invert-white {
+    @apply invert brightness-0 transition;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+
+  /*  -------- Container --------- */
+  .common-container {
+    @apply overflow-scroll py-10 px-5 md:px-8 lg:p-14 h-full;
+  }
+  .home-container {
+    @apply h-full bg-no-repeat bg-hero-small bg-center object-contain lg:bg-hero overflow-scroll py-10 px-5 md:px-8 lg:p-14;
+  }
+
+  .page-heading {
+    @apply lg:mt-8 lg:h1-regular h2-regular;
+  }
+
+  .grids {
+    @apply grid gap-x-5 gap-y-8 lg:grid-cols-2 auto-cols-auto relative;
+  }
+
+  .grid-card {
+    @apply h-full bg-dark-1 border border-gray-1 rounded-lg flex flex-col items-start no-underline overflow-hidden;
+  }
+
+  .grid-card_content {
+    @apply flex flex-col w-full py-7 px-5 h-full gap-1;
+  }
+
+  .image-overlay {
+    @apply bg-image-layer absolute top-0 left-0 bottom-0 right-0;
+  }
+
+  .cover-images {
+    @apply min-w-full lg:h-[21rem] h-[12rem] object-cover inline-block;
+  }
+
+  .tag-box {
+    @apply bg-transparent text-light border border-gray py-[10px] px-[12px] md:py-[10px] md:px-[14px] rounded-lg tiny-regular;
+  }
+
+  .topbar {
+    @apply md:hidden py-3 pt-5 px-5 relative;
+  }
+
+  .leftsidebar {
+    @apply hidden md:flex px-8 py-10 flex-col gap-8 justify-start bg-dark-2 border-r border-gray;
+  }
+
+  .leftsidebar-link {
+    @apply rounded-lg base-regular hover:bg-zinc-900 transition;
+  }
+
+  .menubar {
+    @apply flex flex-col gap-6 w-full relative top-20 px-3;
+  }
+
+  .open_menu-bg {
+    @apply h-screen fixed z-20 right-0 top-0 w-1/2 md:hidden bg-black/50 backdrop-blur-sm transition-transform duration-300;
+  }
+  .open_menu-btn {
+    @apply absolute block right-0 py-3 pt-5 px-5;
+  }
+
+  .experience-card {
+    @apply flex-between gap-5 w-full md:w-2/3;
+  }
+  .experience_box {
+    @apply flex-center flex-col text-teal-500;
+  }
+
+  .tab-card {
+    @apply flex-between lg:flex-nowrap flex-wrap gap-y-2 gap-x-4 pb-4 border-b border-gray mt-12 w-full;
+  }
+  .tabs_list {
+    @apply flex-center py-3 lg:px-14 px-8 rounded-md text-zinc-200 text-[15px] cursor-pointer hover:bg-gray;
+  }
+
+  .pricing-grid {
+    @apply grid lg:grid-cols-3 md:grid-cols-2 items-center justify-center gap-8 auto-cols-auto mt-10 md:mt-16 lg:border lg:gap-5 border-gray-1 rounded-2xl;
+  }
+
+  .pricing-grid_content {
+    @apply py-8 px-6 small-regular rounded-2xl border border-white;
+  }
+
+  .professional-plan {
+    @apply bg-black lg:scale-y-110;
+  }
+
+  .active-feature {
+    @apply text-white opacity-95;
+  }
+
+  .plan-period_buttons {
+    @apply bg-zinc-800 text-zinc-200 py-[10px] px-[12px] rounded-[10px] flex-between mt-8;
+  }
+
+  .plan-btn {
+    @apply p-[6px] px-[10px] rounded-[5px] text-[15px];
+  }
+
+  .get-plan_btn {
+    @apply w-full hover:bg-green hover:text-black py-[10px] px-[40px] rounded-[40px] transition duration-300 border border-green;
+  }
+}
