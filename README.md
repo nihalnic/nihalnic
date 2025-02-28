@@ -8,4 +8,4 @@
 
 <br>
 
- >_Hi, I am 300 moons old. I count everything in moons, it is very confusing for people. I like to build stuff with code <br> that's why I mostly spend my time with_ `NEXT.js` `Typescript` `TailwindCSS` `NODE.js` `Expresss` & `MonogoDB`
+ >Hi, I am 300 moons old. I count everything in moons, it is very confusing for people. I like to build stuff with code <br> that's why I mostly spend my time with `NEXT.js` `Typescript` `TailwindCSS` `NODE.js` `Expresss` & `MonogoDB`
